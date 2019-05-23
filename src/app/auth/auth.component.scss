@@ -1,0 +1,68 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.action-btn {
+  width: 100%;
+  height: 50px;
+  max-width: 300px;
+  background: $color-blue;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @include border-radius(3px);
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.error-msg {
+  color: $color-red;
+}
+
+.form-group {
+  min-height: 62px;
+
+  .form-control {
+    height: 44px;
+    color: $color-dark-grey;
+    padding-left: 30px;
+    @include input-placeholder($color-medium-grey);
+    @include border-radius(3px);
+    &:focus {
+      outline: none !important;
+      border: 1px solid $color-light-grey;
+      box-shadow: 0 0 5px $color-dark-grey;
+    }
+    &.invalid {
+      border: 1px solid $color-red;
+      box-shadow: 0 0 5px $color-red;
+    }
+  }
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 35%;
+    transform: translateY(-35%);
+    color: $color-medium-grey;
+  }
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    border-radius: 4px;
+  }
+}
+
+.login-error {
+  opacity: 0;
+  &.visible {
+    opacity: 1;
+  }
+}

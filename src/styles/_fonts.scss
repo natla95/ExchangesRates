@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+.font-regural {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.font-medium {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.font-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.font14 {
+  font-size: 14px;
+}
+
+.font16 {
+  font-size: 16px;
+}
+
+.font18 {
+  font-size: 18px;
+}
+
+.font20 {
+  font-size: 20px;
+}
+
+.font-light-grey {
+  color: $color-light-grey;
+}
+
+.font-medium-grey {
+  color: $color-medium-grey;
+}
+
+.font-dark-grey {
+  color: $color-dark-grey;
+}
+
+.font-blue {
+  color: $color-blue;
+}
+
+.font-black {
+  color: $color-black;
+}

@@ -1,0 +1,29 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+.row {
+  background-color: $color-light-grey;
+  &.odd {
+    background-color: #dcdee0;
+  }
+}
+
+.rates-details {
+  > div:first-child {
+    background-color: $color-blue;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+}
+
+select {
+  @include input-select();
+  max-width: 230px;
+}
+
+::ng-deep {
+  .ng-scrollbar-thumb {
+    height: 200px !important;
+    background-color: $color-blue !important;
+  }
+}

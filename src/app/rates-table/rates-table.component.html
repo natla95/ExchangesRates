@@ -1,0 +1,39 @@
+<div class="grey-container p-5">
+  <ng-scrollbar>
+    <div class="bg-white p-5">
+      <p class="font18 font-blue font-bold">Kursy wymiany walut</p>
+      <div class="form-group d-flex align-items-center">
+        <label class="m-0">Wybierz datę</label>
+        <select
+          class="form-control ml-3"
+          (change)="updateTabelDetails(dateTrigger.value)"
+          #dateTrigger
+        >
+          <option *ngFor="let item of ratesData">
+            {{ item?.effectiveDate }}</option
+          >
+        </select>
+      </div>
+
+        <div class="rates-details" *ngIf="tabelDetailsToDisplay">
+          <div class="row m-0 py-4 bg-light-blue">
+            <div class="col-1" ></div>
+            <div class="col-5 font16 font-bold pl-3">Nazwa waluty</div>
+            <div class="col-3 font16 font-bold pl-3">Kod waluty</div>
+            <div class="col-3 font16 font-bold pl-3">Kurs waluty</div>
+          </div>
+
+            <div
+              class="row m-0"
+              *ngFor="let rate of tabelDetailsToDisplay['rates']; let i = index let odd = odd"
+              [class.odd]="odd"
+            >
+              <div class="col-1">{{ i+1 }}</div>
+              <div class="col-5 pl-3 py-1">{{ rate?.currency }}</div>
+              <div class="col-3 pl-3 py-1">{{ rate?.code }}</div>
+              <div class="col-3 pl-3 py-1 font-medium">{{ rate?.mid | currency:'PLN':'' }} PLN</div>
+            </div>
+        </div>
+    </div>
+  </ng-scrollbar>
+</div>
